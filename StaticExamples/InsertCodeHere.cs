@@ -22,6 +22,15 @@ namespace StaticExamples
             int average = ListMethods.FindAverage(aList);
             Console.WriteLine("The average of the list is : {0}", average);
 
+            Car car1 = new Car("AB55666", 1000);
+            Car car2 = new Car("BW77333", 5000);
+            Car car3 = new Car("GH55222", 10000);
+
+            Console.WriteLine(Car.NoOfObjectCars);
+            Console.WriteLine(Car.GetLincePlate);
+            Console.WriteLine(Car.GetPrice);
+            Console.WriteLine(Car.PrintUsageStatistics());
+
             // The LAST line of code should be ABOVE this line
         }
     }

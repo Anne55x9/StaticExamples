@@ -1,7 +1,15 @@
-﻿namespace StaticExamples
+﻿using System.Collections.Generic;
+
+namespace StaticExamples
 {
     public class Car
     {
+
+        public static int NoOfObjectCars = 0;
+        public static int GetLincePlate = 0;
+        public static int GetPrice = 0;
+        
+
         private string _licensePlate;
         private int _price;
 
@@ -21,6 +29,16 @@
         {
             _licensePlate = licensePlate;
             _price = price;
+            NoOfObjectCars++;
+            GetLincePlate++;
+            GetPrice++;
         }
+
+        public static int PrintUsageStatistics()
+        {
+            return NoOfObjectCars + GetLincePlate + GetPrice;
+        }
+
+
     }
 }
